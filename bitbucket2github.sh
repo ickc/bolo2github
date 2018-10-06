@@ -43,7 +43,7 @@ done
 # helpers ##############################################################
 
 org="${name%/*}"
-repo="${name##*.}"
+repo="${name##*/}"
 
 cd "$dir"
 git clone --bare "${input}:${name}"
