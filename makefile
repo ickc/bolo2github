@@ -1,3 +1,5 @@
+MIRRORDIR=/mnt/raid24/scratch/temp
+
 default: all.txt clone.txt
 
 all.txt:
@@ -13,4 +15,4 @@ mirror-github:
 	< all.txt xargs -n1 -P0 ./bolo2github.sh -n
 
 mirror-bitbucket:
-	< bitbucket.txt xargs -n1 -P0 ./bitbucket2github.sh -n
+	< bitbucket.txt xargs -n1 -P0 ./bitbucket2github.sh -d "$(MIRRORDIR)" -n
