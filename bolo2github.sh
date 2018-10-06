@@ -6,9 +6,9 @@ usage="${BASH_SOURCE[0]} [-h] [-n name] [-i input] [-o output] --- update github
 
 where:
 	-h	show this help message
-	-n  name of the repo
-	-i  input
-	-o  output
+	-n	name of the repo
+	-i	input
+	-o	output
 "
 
 # getopts ######################################################################
