@@ -10,4 +10,4 @@ clone.txt: all.txt
 	sed 's/^/git clone --bare khcheung@bolowiki\.berkeley\.edu:\/pbrepo\//g' $^ > $@
 
 mirror:
-	< all.txt xargs -i -n1 -P0 bash -c './bolo2github.sh -n $0' {}
+	< all.txt xargs -n1 -P0 ./bolo2github.sh -n
