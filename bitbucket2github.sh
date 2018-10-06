@@ -6,10 +6,10 @@ usage="${BASH_SOURCE[0]} [-h] [-n name] [-i input] [-o output] [-d dir] --- upda
 
 where:
 	-h	show this help message
-	-n  name of the repo
-	-i  input
-	-o  output
-	-d  directory to clone the repo
+	-n	name of the repo
+	-i	input
+	-o	output
+	-d	directory to clone the repo
 "
 
 # getopts ######################################################################
