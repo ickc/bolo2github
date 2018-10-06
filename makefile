@@ -9,5 +9,8 @@ all.txt:
 clone.txt: all.txt
 	sed 's/^/git clone --bare khcheung@bolowiki\.berkeley\.edu:\/pbrepo\//g' $^ > $@
 
-mirror:
+mirror-github:
 	< all.txt xargs -n1 -P0 ./bolo2github.sh -n
+
+mirror-bitbucket:
+	< bitbucket.txt xargs -n1 -P0 ./bitbucket2github.sh -n
