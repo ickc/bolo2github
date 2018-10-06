@@ -29,6 +29,8 @@ while getopts "n:i:o:d:h" opt; do
 		;;
 	o)	output="$OPTARG"
 		;;
+	d)	dir="$OPTARG"
+		;;
 	h)	printf "$usage"
 		exit 0
 		;;
