@@ -41,4 +41,4 @@ done
 
 nameWOExt="${name%.*}"
 cd "$input/$name"
-git push --mirror "$output/$nameWOExt.git" || (>&2 printf '%s\n' 'Cannot mirror' "$name" )
+git push --mirror "$output/$nameWOExt.git" || (>&2 printf '%s\n' "[FAILED] cannot mirror $name" )
