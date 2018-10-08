@@ -45,7 +45,7 @@ done
 org="${name%/*}"
 repo="${name##*/}"
 
-mkdir -p && cd "$dir"
+mkdir -p "$dir" && cd "$dir"
 git clone --bare "${input}:${name}"
 cd "${repo}.git"
 git push --mirror "$output/$repo.git" || (>&2 printf '%s\n' "[FAILED] cannot mirror $name" )
