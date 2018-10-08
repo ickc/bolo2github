@@ -8,6 +8,7 @@ all.txt:
 	| awk -F'/' '{print $$(NF - 1)}' \
 	| sort > $@
 
+# a list of command to clone bare from bolowiki
 clone.txt: all.txt
 	sed 's/^/git clone --bare khcheung@bolowiki\.berkeley\.edu:\/pbrepo\//g' $^ > $@
 
