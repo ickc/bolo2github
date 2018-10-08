@@ -17,3 +17,6 @@ mirror-github:
 
 mirror-bitbucket:
 	< bitbucket.txt xargs -n1 -P0 ./bitbucket2github.sh -d "$(MIRRORDIR)" -n
+
+clean:
+	rm -rf "$(MIRRORDIR)"
