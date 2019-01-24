@@ -1,4 +1,4 @@
-MIRRORDIR=/mnt/raid24/scratch/temp
+MIRRORDIR ?= /mnt/tmpfs
 
 default: all.txt clone.txt
 
