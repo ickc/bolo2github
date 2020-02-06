@@ -1,7 +1,8 @@
-MIRRORDIR ?= /mnt/tmpfs
+MIRRORDIR ?= ${SCRATCH}/bolo2github
 
 default: all.txt clone.txt
 
+# this can also be run locally on bolo
 all.txt:
 	ssh -t khcheung@bolo.berkeley.edu \
 	'find /pbrepo \! -path "*/*.bak/*" \( -maxdepth 2 -mindepth 2 -type f -name HEAD \) -o \( -type d -name ".git" \)' \
@@ -12,7 +13,7 @@ all.txt:
 clone.txt: all.txt
 	sed 's/^/git clone --bare khcheung@bolowiki\.berkeley\.edu:\/pbrepo\//g' $^ > $@
 
-mirror-github:
+mirror-github: all.txt
 	< all.txt xargs -n1 -P0 ./bolo2github.sh -n
 
 mirror-bitbucket:
