@@ -6,6 +6,7 @@ BeamMap.git
 BerkeleyMonitor.git
 CFFridgeScripts.git
 CapacitorScheduler.git
+CosmoMC.git
 DataSimulation.git
 DfMuxMonitor.git
 FTS.git
