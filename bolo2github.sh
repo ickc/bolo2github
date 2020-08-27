@@ -39,6 +39,6 @@ done
 
 # helpers ##############################################################
 
-nameWOExt="${name%.*}"
+[[ "${name: -4}" == .git ]] && fullName="$name" || fullName="${name}.git"
 cd "$input/$name"
-git push --mirror "$output/$nameWOExt.git" || (>&2 printf '%s\n' "[FAILED] cannot mirror $name" )
+git push --mirror "$output/$fullName" || (>&2 printf '%s\n' "[FAILED] cannot mirror $name" )
